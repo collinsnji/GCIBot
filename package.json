@@ -1,0 +1,29 @@
+{
+  "name": "gcibot",
+  "version": "1.0.0",
+  "description": "Simple Google Code-In Telegram bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Passing\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/collinsnji/GCIBot.git"
+  },
+  "keywords": [
+    "GCI",
+    "Telegram",
+    "Bot",
+    "Google"
+  ],
+  "author": "Collin Grimm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/collinsnji/GCIBot/issues"
+  },
+  "homepage": "https://github.com/collinsnji/GCIBot#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.27.1"
+  }
+}
