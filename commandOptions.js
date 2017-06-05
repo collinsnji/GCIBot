@@ -1,6 +1,5 @@
 module.exports = {
-	a: `TRIP A
-======
+	a: `*TRIP A*
 Deniz Karakay
 August van de Ven
 Scott Moses
@@ -16,8 +15,7 @@ Jacqueline Bronger
 Soham Sen
 Filip Grzywok
 Justin Du`,
-	b:  `TRIP B
-======
+	b:  `*TRIP B*
 Evgeny Shulgin
 Alexandru Bratosin
 Sergey Popov
@@ -36,10 +34,8 @@ Raefaldhi Amartya Junior
 Vanisha Kesswani
 Michal Hanus
 Sudhanshu Agarwal`,
-	pictures:  `Google Code-In Photo Album
----------------------------
-https://goo.gl/photos/z6igidSJYce4Mv3c7`,
-	dates: "Trip A: Mon Jun 05 - Thu Jun 08\nTrip B: Mon Jun 26 - Thu Jun 29",
+	pictures:  `Google Code-In [Photo Album](https://goo.gl/photos/z6igidSJYce4Mv3c7)`,
+	dates: "Trip A: *Mon Jun 05 - Thu Jun 08*\nTrip B: *Mon Jun 26 - Thu Jun 29*",
 	help: `Usage: /trip <command>
 Where <command> is one of:
 A, B, Pictures
