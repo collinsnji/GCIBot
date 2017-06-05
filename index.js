@@ -6,7 +6,8 @@ const failedMessage = `Command not found. Enter command \`/trip help\` to see fu
 
 const { API_KEY } = process.env
 const telegram = new TelegramBotAPI(API_KEY);
-telegram.openWebHook()
+telegram.deleteWebHook()
+	.then(telegram.openWebHook())
 	.then(telegram.startPolling({
 		restart: true,
 	}))
