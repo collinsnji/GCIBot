@@ -10,7 +10,8 @@ Daniel Hsing
 Anshuman Agarwal
 Cristian Garcia
 Tymon Radzik
-Dhruv Shrivastava Sawan Kumar
+Dhruv Shrivastava
+Sawan Kumar
 Jacqueline Bronger
 Soham Sen
 Filip Grzywok
