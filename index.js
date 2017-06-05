@@ -1,8 +1,8 @@
 const TelegramBotAPI = require('node-telegram-bot-api');
 const fs = require('fs');
+require('dotenv').config();
 
-const config = JSON.parse(fs.readFileSync("config.json")),
-	API_KEY = config.API_KEY;
+const { API_KEY } = process.env
 const telegram = new TelegramBotAPI(API_KEY, { polling: true });
 
 const commandOptions = {

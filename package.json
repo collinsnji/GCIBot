@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/collinsnji/GCIBot#readme",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "node-telegram-bot-api": "^0.27.1"
   }
 }
