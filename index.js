@@ -19,20 +19,20 @@ var TripA = "TRIP A\n ======\nDeniz Karakay\nAugust van de Ven\nScott Moses\nIsa
 				---------------------------\n\
 				https://goo.gl/photos/z6igidSJYce4Mv3c7",
 
-	TripDates = "Trip A: Mon Jun 05 - Thur June 08\nTrip B: Mon Jun 26 - Thur Jun 29",
+	TripDates = "Trip A: Mon Jun 05 - Thu Jun 08\nTrip B: Mon Jun 26 - Thu Jun 29",
 	HelpMsg = "Usage: /trip <command>\nWhere <command> is one of:\nA, B, Pictures\n(Commands are case insensitive)";
 
 var words = ["A", "B", "Help", "Pictures", "Dates"];
 var response = [TripA, TripB, HelpMsg, TripPics, TripDates];
 
 telegram.on("text", (message) => {
-	if (message.text.toLowerCase().substr(0, 5) == "/trip") {
+	var cmdExtract = message.text.toLowerCase().substr(0, 5);
+	var msgText = (message.text.toLowerCase().substr(6, message.text.length));
+
+	if (cmdExtract == "/trip") {
 		for (var i = 0; i < words.length; i++) {
 			var res = response[i];
-			if (message.text.toLowerCase().includes(words[i].toLowerCase())) {
-				return telegram.sendMessage(message.chat.id, res, { parse_mode: "markdown" });
-			}
-			if (message.text.toLowerCase() == words[i].toLowerCase()) {
+			if (msgText.toLowerCase().trim() == words[i].toLowerCase()) {
 				return telegram.sendMessage(message.chat.id, res);
 			}
 		}
