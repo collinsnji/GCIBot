@@ -2,6 +2,7 @@ const TelegramBotAPI = require('node-telegram-bot-api');
 require('dotenv').config();
 const commandOptions = require('./commandOptions')
 const failedMessage = `Command not found. Enter command \`/trip help\` to see full list of options`
+const http = require('http')
 
 const { API_KEY, PORT, HOST } = process.env
 const telegram = new TelegramBotAPI(API_KEY, { webHook : { port : PORT || 443, host : HOST } });
@@ -23,3 +24,7 @@ telegram.deleteWebHook()
 	.catch((err) => {
 		console.log(err);
 	})
+
+setInterval(function() {
+	http.get('https://gcibot16-17.herokuapp.com');
+}, 1800000);
