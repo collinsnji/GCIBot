@@ -1,11 +1,10 @@
 const TelegramBotAPI = require('node-telegram-bot-api');
-const fs = require('fs');
 require('dotenv').config();
 const commandOptions = require('./commandOptions')
 const failedMessage = `Command not found. Enter command \`/trip help\` to see full list of options`
 
-const { API_KEY } = process.env
-const telegram = new TelegramBotAPI(API_KEY);
+const { API_KEY, PORT, HOST } = process.env
+const telegram = new TelegramBotAPI(API_KEY, { webHook : { port : PORT || 443, host : HOST } });
 telegram.deleteWebHook()
 	.then(telegram.openWebHook())
 	.then(telegram.startPolling({
