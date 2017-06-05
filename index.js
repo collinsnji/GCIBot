@@ -19,15 +19,14 @@ var TripA = "TRIP A\n ======\nDeniz Karakay\nAugust van de Ven\nScott Moses\nIsa
 				---------------------------\n\
 				https://goo.gl/photos/z6igidSJYce4Mv3c7",
 
-	HelpMsg = "Usage: @CodeInBot <command>\n\
-			  Where <command> is one of:\n\
-			      Trip A, Trip B, Trip Pictures\n"
+	TripDates = "Trip A: Mon Jun 05 - Thur June 08\nTrip B: Mon Jun 26 - Thur Jun 29",
+	HelpMsg = "Usage: /trip <command>\nWhere <command> is one of:\nA, B, Pictures\n(Commands are case insensitive)";
 
-var words = ["Trip A", "Trip B", "Help", "Trip Pictures"];
-var response = [TripA, TripB, HelpMsg, TripPics];
+var words = ["A", "B", "Help", "Pictures", "Dates"];
+var response = [TripA, TripB, HelpMsg, TripPics, TripDates];
 
 telegram.on("text", (message) => {
-	if (message.text.substr(0, 10) == "@CodeInBot") {
+	if (message.text.toLowerCase().substr(0, 5) == "/trip") {
 		for (var i = 0; i < words.length; i++) {
 			var res = response[i];
 			if (message.text.toLowerCase().includes(words[i].toLowerCase())) {
