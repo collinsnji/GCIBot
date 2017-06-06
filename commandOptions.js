@@ -35,7 +35,7 @@ Raefaldhi Amartya Junior
 Vanisha Kesswani
 Michal Hanus
 Sudhanshu Agarwal`,
-	pictures:  `Google Code-In [Photo Album](https://goo.gl/photos/z6igidSJYce4Mv3c7)`,
+	pictures:  `Google Code-In [Photo Album](https://photos.google.com/share/AF1QipMVvU1eyYMY5V9J6qg_3HpxpiCoKGjnJ9LiIplG60R0iIfohp3MMBumMdgcOj-12w?key=NTU0YTJvM1JuUVZOOWFaUjYxQlA4eWFPNGhlQ3ZR)`,
 	dates: "Trip A: *Mon Jun 05 - Thu Jun 08*\nTrip B: *Mon Jun 26 - Thu Jun 29*",
 	help: `Usage: /trip <command>
 Where <command> is one of:
